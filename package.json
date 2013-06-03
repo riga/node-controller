@@ -1,0 +1,24 @@
+{
+    "name": "node-controller",
+    "preferGlobal": false,
+    "version": "0.0.1",
+    "author": "Marcel Rieger <marcelrieger@me.com>",
+    "description": "A lightweight, single-file Controller approach for node/express.",
+    "main": "./lib/controller.min.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/riga/node-controller.git"
+    },
+    "keywords": [
+        "mvc",
+        "controller",
+        "express",
+        "cherrypy",
+        "routes"
+    ],
+    "dependencies" : {},
+    "license": "MIT",
+    "engines": {
+        "node": ">=0.6"
+    }
+}
