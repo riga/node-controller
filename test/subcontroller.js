@@ -30,5 +30,7 @@ var SubCtrl = Controller.extend({
 
 var ctrl = new NodeCtrl('Root');
 ctrl.bind(app);
+// or
+// app.use(ctrl.middleware());
 
 app.listen(3000);

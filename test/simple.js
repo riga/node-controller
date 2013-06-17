@@ -15,7 +15,9 @@ var NodeCtrl = Controller.extend({
 
 });
 
-var ctrl = new NodeCtrl('Root');
+var ctrl = new NodeCtrl('Root', {base: '/wohos/'});
 ctrl.bind(app);
+// or
+// app.use(ctrl.middleware());
 
 app.listen(3000);

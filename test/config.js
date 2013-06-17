@@ -20,11 +20,14 @@ var NodeCtrl = Controller.extend({
 });
 
 var config = {
+    base  : '/foobase/',
     index : 'foobar',
     scheme: '___%s'
 };
 
 var ctrl = new NodeCtrl('Root', config);
 ctrl.bind(app);
+// or
+// app.use(ctrl.middleware());
 
 app.listen(3000);
