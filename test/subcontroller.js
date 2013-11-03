@@ -1,7 +1,7 @@
-var express = require('express');
+var express = require("express");
 var app = express();
 
-var Controller = require('../lib/controller.min');
+var Controller = require("../lib/controller.min");
 
 var NodeCtrl = Controller.extend({
 
@@ -12,7 +12,7 @@ var NodeCtrl = Controller.extend({
     },
 
     _index_: function(req, res) {
-        res.send('Hello Controller!');
+        res.send("Hello Controller!");
     }
 
 });
@@ -24,11 +24,11 @@ var SubCtrl = Controller.extend({
     },
 
     _index_: function(req, res) {
-        res.send('Sub index called!');
+        res.send("Sub index called!");
     }
 });
 
-var ctrl = new NodeCtrl('Root');
+var ctrl = new NodeCtrl("Root");
 ctrl.bind(app);
 // or
 // app.use(ctrl.middleware());

@@ -1,7 +1,7 @@
-var express = require('express');
+var express = require("express");
 var app = express();
 
-var Controller = require('../lib/controller.min');
+var Controller = require("../lib/controller.min");
 
 var NodeCtrl = Controller.extend({
 
@@ -10,22 +10,22 @@ var NodeCtrl = Controller.extend({
     },
 
     ___foobar: function(req, res) {
-        res.send('Hello Controller!');
+        res.send("Hello Controller!");
     },
 
     ___test: function(req, res) {
-        res.send('Test function');
+        res.send("Test function");
     }
 
 });
 
 var config = {
-    base  : '/foobase/',
-    index : 'foobar',
-    scheme: '___%s'
+    base  : "/foobase/",
+    index : "foobar",
+    scheme: "___%s"
 };
 
-var ctrl = new NodeCtrl('Root', config);
+var ctrl = new NodeCtrl("Root", config);
 ctrl.bind(app);
 // or
 // app.use(ctrl.middleware());

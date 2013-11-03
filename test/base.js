@@ -1,7 +1,7 @@
-var express = require('express');
+var express = require("express");
 var app = express();
 
-var Controller = require('../lib/controller.min');
+var Controller = require("../lib/controller.min");
 
 var NodeCtrl = Controller.extend({
 
@@ -10,12 +10,12 @@ var NodeCtrl = Controller.extend({
     },
 
     _index_: function(req, res) {
-        res.send('Hello Controller!');
+        res.send("Hello Controller!");
     }
 
 });
 
-var ctrl = new NodeCtrl('Root', {base: '/mybase/'});
+var ctrl = new NodeCtrl("Root", {base: "/mybase/"});
 ctrl.bind(app);
 // or
 // app.use(ctrl.middleware());
