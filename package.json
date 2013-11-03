@@ -1,7 +1,7 @@
 {
     "name": "node-controller",
     "preferGlobal": false,
-    "version": "0.0.4",
+    "version": "0.0.5",
     "author": "Marcel Rieger <marcelrieger@me.com>",
     "description": "A lightweight, single-file Controller approach for node/express.",
     "main": "./lib/controller.min.js",
