@@ -1,9 +1,9 @@
 var express = require("express");
 var app = express();
 
-var Controller = require("../lib/controller.min");
+var Controller = require("../lib/controller.js");
 
-var NodeCtrl = Controller.extend({
+var NodeCtrl = Controller._extend({
 
     init: function(parent, config) {
         this._super(parent, config);
@@ -17,7 +17,7 @@ var NodeCtrl = Controller.extend({
 
 });
 
-var SubCtrl = Controller.extend({
+var SubCtrl = Controller._extend({
 
     init: function(parent, config) {
         this._super(parent, config);
@@ -29,8 +29,8 @@ var SubCtrl = Controller.extend({
 });
 
 var ctrl = new NodeCtrl("Root");
-ctrl.bind(app);
+app.use(ctrl.middleware());
 // or
-// app.use(ctrl.middleware());
+// ctrl.bind(app);
 
 app.listen(3000);
