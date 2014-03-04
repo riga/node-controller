@@ -1,7 +1,7 @@
 {
     "name": "node-controller",
     "preferGlobal": false,
-    "version": "0.1.3",
+    "version": "0.1.4",
     "author": "Marcel Rieger <marcelrieger@me.com>",
     "description": "A lightweight, single-file Controller approach for node/express.",
     "main": "./lib/controller.min.js",
@@ -18,7 +18,7 @@
     ],
     "dependencies": {
         "node.extend": ">= 1.0.8",
-        "node-oo": ">= 0.0.4"
+        "node-oo": ">= 0.0.5"
     },
     "devDependencies": {
         "express": ">= 3.4.8"
