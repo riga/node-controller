@@ -18,7 +18,7 @@
     ],
     "dependencies": {
         "node.extend": ">= 1.0.8",
-        "node-oo": ">= 0.0.3"
+        "node-oo": ">= 0.0.4"
     },
     "devDependencies": {
         "express": ">= 3.4.8"
