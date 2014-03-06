@@ -9,7 +9,7 @@ var NodeCtrl = Controller._extend({
         this._super(parent, config);
     },
 
-    _index_: function(req, res) {
+    _index_: function(req, res) {
         res.send("Hello Controller!");
     },
 

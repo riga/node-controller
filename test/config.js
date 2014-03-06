@@ -9,14 +9,13 @@ var NodeCtrl = Controller._extend({
         this._super(parent, config);
     },
 
-    ___foobar: function(req, res) {
+    ___foobar: function(req, res) {
         res.send("Hello Controller!");
     },
 
     ___test: function(req, res) {
         res.send("Test function");
     }
-
 });
 
 var config = {

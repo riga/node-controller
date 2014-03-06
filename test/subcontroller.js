@@ -11,10 +11,9 @@ var NodeCtrl = Controller._extend({
         this.sub = new SubCtrl(this, config);
     },
 
-    _index_: function(req, res) {
+    _index_: function(req, res) {
         res.send("Hello Controller!");
     }
-
 });
 
 var SubCtrl = Controller._extend({
