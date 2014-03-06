@@ -15,7 +15,7 @@ var NodeCtrl = Controller._extend({
 
 });
 
-var ctrl = new NodeCtrl("Root");
+var ctrl = new NodeCtrl();
 app.use(ctrl.middleware());
 // or
 // ctrl.bind(app);

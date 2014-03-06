@@ -4,6 +4,7 @@ var app = express();
 var Controller = require("../lib/controller.js");
 
 var NodeCtrl = Controller._extend({
+
     init: function(parent, config) {
         this._super(parent, config);
     },
@@ -13,7 +14,7 @@ var NodeCtrl = Controller._extend({
     }
 });
 
-var ctrl = new NodeCtrl("Root", {base: "/mybase/"});
+var ctrl = new NodeCtrl("root", {base: "/mybase/"});
 app.use(ctrl.middleware());
 // or
 // ctrl.bind(app);

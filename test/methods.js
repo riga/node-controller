@@ -14,28 +14,25 @@ var NodeCtrl = Controller._extend({
     },
 
     _get_: function(req, res) {
-      if (!this.requireGET(req, res))
-        return;
+      this.requireGET(req, res);
 
       res.send("You called via GET!");
     },
 
     _post_: function(req, res) {
-      if (!this.requirePOST(req, res))
-        return;
+      this.requirePOST(req, res);
 
       res.send("You called via POST!");
     },
 
     _notput_: function(req, res) {
-      if (!this.restrictMethods(req, res, "PUT"))
-        return;
+      this.restrictMethod(req, res, "PUT");
 
       res.send("You didn't call via PUT!");
     }
 });
 
-var ctrl = new NodeCtrl("Root");
+var ctrl = new NodeCtrl("root");
 app.use(ctrl.middleware());
 // or
 // ctrl.bind(app);

@@ -25,7 +25,7 @@ var config = {
     scheme: "___%s"
 };
 
-var ctrl = new NodeCtrl("Root", config);
+var ctrl = new NodeCtrl("root", config);
 app.use(ctrl.middleware());
 // or
 // ctrl.bind(app);
