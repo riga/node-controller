@@ -15,7 +15,9 @@ var NodeCtrl = Controller._extend({
 
   _simplefail_: function(req, res) {
     console.log("simple fail triggered");
-    throw 404;
+    // throw 404;
+    // throw {status: 404, err: "there was an error"};
+    throw new Error("nope!");
   },
 
   _complexfail_: function(req, res) {
