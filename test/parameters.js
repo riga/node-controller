@@ -8,7 +8,7 @@ var NodeCtrl = Controller._extend({
   init: function(parent, config) {
     this._super(parent, config);
 
-    this.setParameterNames("add", ["name", "age"]);
+    this.setParameters("add", ["name", "age"]);
   },
 
   _index_: function(req, res) {
@@ -21,7 +21,7 @@ var NodeCtrl = Controller._extend({
   }
 });
 
-var ctrl = new NodeCtrl("root", {exactParNames: true});
+var ctrl = new NodeCtrl("root", {exactParameters: true});
 app.use(ctrl.middleware());
 // or
 // ctrl.bind(app);
