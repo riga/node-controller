@@ -5,31 +5,39 @@ var Controller = require("../lib/controller.js");
 
 var NodeCtrl = Controller._extend({
 
-    init: function(parent, config) {
-        this._super(parent, config);
-    },
+  init: function(parent, config) {
+    this._super(parent, config);
+  },
 
-    _index_: function(req, res) {
-        res.send("Hello Controller!");
-    },
+  _index_: function(req, res) {
+    res.send("Hello Controller!");
+  },
 
-    _get_: function(req, res) {
-      this.requireGET(req, res);
+  _get_: function(req, res) {
+    this.requireGET(req, res);
 
-      res.send("You called via GET!");
-    },
+    res.send("You called via GET!");
+  },
 
-    _post_: function(req, res) {
-      this.requirePOST(req, res);
+  _post_: function(req, res) {
+    this.requirePOST(req, res);
 
-      res.send("You called via POST!");
-    },
+    res.send("You called via POST!");
+  },
 
-    _notput_: function(req, res) {
-      this.restrictMethod(req, res, "PUT");
+  _post2_: function(req, res) {
+    this.requirePOST(req, res, function() {
+      res.send(req.method + " is not allowed here!");
+    });
 
-      res.send("You didn't call via PUT!");
-    }
+    res.send("You called via POST!");
+  },
+
+  _notput_: function(req, res) {
+    this.restrictMethod(req, res, "PUT");
+
+    res.send("You didn't call via PUT!");
+  }
 });
 
 var ctrl = new NodeCtrl();

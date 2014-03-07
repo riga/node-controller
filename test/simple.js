@@ -5,13 +5,13 @@ var Controller = require("../lib/controller.js");
 
 var NodeCtrl = Controller._extend({
 
-    init: function(parent, config) {
-        this._super(parent, config);
-    },
+  init: function(parent, config) {
+    this._super(parent, config);
+  },
 
-    _index_: function(req, res) {
-        res.send("Hello Controller!");
-    }
+  _index_: function(req, res) {
+    res.send("Hello Controller!");
+  }
 });
 
 var ctrl = new NodeCtrl();
